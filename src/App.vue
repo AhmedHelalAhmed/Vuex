@@ -18,8 +18,8 @@
       this is the use of props
       we must put props: ['products'] to allow it to get the data
       -->
-    <product-list-one v-bind:products="products"></product-list-one>
-    <product-list-two v-bind:products="products"></product-list-two>
+    <product-list-one></product-list-one>
+    <product-list-two></product-list-two>
   </div>
 </template>
 
@@ -44,22 +44,7 @@ export default {
   name: 'app',
   // End name of the component App
 
-  // Start data of App
-  data () {
-  // Start return object
-    return {
-      // Start ==> variable : value
-      // products:[
-      //   {name: 'Banana Skin', price: 20},
-      //   {name: 'Shiny Star', price: 40},
-      //   {name: 'Green Shells', price: 60},
-      //   {name: 'Red Shells', price: 80}
-      // ]
-      // End ==> variable : value
-    }
-  // End return object
-  }
-  // End data of App
+
 
 }
 </script>
