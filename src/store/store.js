@@ -40,12 +40,12 @@ export const store = new Vuex.Store({
 
 
     reducePrice: state =>{
-/*
+
       state.products.forEach(product=>{
         product.price-=1;
       })
 
-*/
+
 
 
 
@@ -72,7 +72,7 @@ export const store = new Vuex.Store({
 
 
 
-  }
+  },
   // End the best way for editing the state of the vuex
 
 
@@ -80,12 +80,20 @@ export const store = new Vuex.Store({
 
   // Start Asynchronous is the limitations of mutations ==> action is the solution for that
 
+  actions:{
 
+    reducePrice: context =>{
+
+      setTimeout(function(){
+        // Start context commit some mutations
+        context.commit('reducePrice');
+        // End context commit some mutations
+      },3000);
+
+    }
+  }
 
   // End Asynchronous is the limitations of mutations ==> action is the solution for that
-
-
-
 
 });
 // end state is just data in our application

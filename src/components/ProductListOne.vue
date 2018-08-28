@@ -49,9 +49,12 @@ export default {
       */
 
      // Start the best way to track the sate - editing the state
-     this.$store.commit('reducePrice');
+     /*
+      this.$store.commit('reducePrice');
+     */
      // End the best way to track the sate - editing the state
 
+      this.$store.dispatch('reducePrice');
 
       }
     // End bad way to change the data in the vuex which is not debuggable - (editting the data directly)
