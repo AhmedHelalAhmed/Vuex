@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 // start state is just data in our application
 export const store = new Vuex.Store({
-
+  strict: true,
   state:{
       // Start ==> variable : value ====>array of objects
       products:[
@@ -32,9 +32,23 @@ export const store = new Vuex.Store({
       });
       return saleProducts;
     },
-  }
+  },
   // End Getters to make changes to data before get it
 
+  // Start the best way for editing the state of the vuex
+  mutations:{
+
+
+    reducePrice: state =>{
+      state.products.forEach(product=>{
+        product.price-=1;
+      })
+    },
+
+
+
+  }
+  // End the best way for editing the state of the vuex
 });
 // end state is just data in our application
 

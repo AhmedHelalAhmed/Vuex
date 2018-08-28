@@ -40,13 +40,21 @@ export default {
   // Start methods
   methods:{
 
-    // Start bad way to change the data in the vuex which is not debuggable
+    // Start bad way to change the data in the vuex which is not debuggable - (editting the data directly)
     reducePrice(){
-      this.$store.state.products.forEach(product => {
-        product.price-=1;
-      });
+      /*
+        this.$store.state.products.forEach(product => {
+          product.price-=1;
+        });
+      */
+
+     // Start the best way to track the sate - editing the state
+     this.$store.commit('reducePrice');
+     // End the best way to track the sate - editing the state
+
+
       }
-    // End bad way to change the data in the vuex which is not debuggable
+    // End bad way to change the data in the vuex which is not debuggable - (editting the data directly)
 
   },
   // End methods
