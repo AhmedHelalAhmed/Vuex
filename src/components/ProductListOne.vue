@@ -7,11 +7,13 @@
           <span class="price">${{product.price}}</span>
         </li>
     </ul>
+    <button v-on:click="reducePrice">Reduce Price</button>
   </div>
 </template>
 
 <script>
 export default {
+  // Start computed
   computed:{
     products(){
       return this.$store.state.products;
@@ -30,7 +32,26 @@ export default {
 
       return this.$store.getters.saleProducts;
     }
-  }
+  },
+  // End computed
+
+
+
+  // Start methods
+  methods:{
+
+    // Start bad way to change the data in the vuex which is not debuggable
+    reducePrice(){
+      this.$store.state.products.forEach(product => {
+        product.price-=1;
+      });
+      }
+    // End bad way to change the data in the vuex which is not debuggable
+
+  },
+  // End methods
+
+
 }
 </script>
 
