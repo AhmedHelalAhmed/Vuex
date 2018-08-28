@@ -40,15 +40,53 @@ export const store = new Vuex.Store({
 
 
     reducePrice: state =>{
+/*
       state.products.forEach(product=>{
         product.price-=1;
       })
+
+*/
+
+
+
+
+
+// Start Asynchronous is the limitations of mutations
+// Asynchronous
+/*
+  setTimeout(function(){
+    state.products.forEach(product=>{
+      product.price-=1;
+    });
+  },3000);
+*/
+// End Asynchronous is the limitations of mutations
+
+
+
+
+
+
     },
+
 
 
 
   }
   // End the best way for editing the state of the vuex
+
+
+
+
+  // Start Asynchronous is the limitations of mutations ==> action is the solution for that
+
+
+
+  // End Asynchronous is the limitations of mutations ==> action is the solution for that
+
+
+
+
 });
 // end state is just data in our application
 
