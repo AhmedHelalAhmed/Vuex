@@ -49,12 +49,12 @@ export default {
   // Start return object
     return {
       // Start ==> variable : value
-      products:[
-        {name: 'Banana Skin', price: 20},
-        {name: 'Shiny Star', price: 40},
-        {name: 'Green Shells', price: 60},
-        {name: 'Red Shells', price: 80}
-      ]
+      // products:[
+      //   {name: 'Banana Skin', price: 20},
+      //   {name: 'Shiny Star', price: 40},
+      //   {name: 'Green Shells', price: 60},
+      //   {name: 'Red Shells', price: 80}
+      // ]
       // End ==> variable : value
     }
   // End return object
