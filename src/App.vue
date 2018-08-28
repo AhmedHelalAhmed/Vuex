@@ -19,7 +19,7 @@
       we must put props: ['products'] to allow it to get the data
       -->
     <product-list-one v-bind:products="products"></product-list-one>
-    <product-list-two></product-list-two>
+    <product-list-two v-bind:products="products"></product-list-two>
   </div>
 </template>
 
