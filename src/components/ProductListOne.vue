@@ -7,7 +7,7 @@
           <span class="price">${{product.price}}</span>
         </li>
     </ul>
-    <button v-on:click="reducePrice">Reduce Price</button>
+    <button v-on:click="reducePrice(5)">Reduce Price</button>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
   methods:{
 
     // Start bad way to change the data in the vuex which is not debuggable - (editting the data directly)
-    reducePrice(){
+    reducePrice(amount){
       /*
         this.$store.state.products.forEach(product => {
           product.price-=1;
@@ -54,7 +54,7 @@ export default {
      */
      // End the best way to track the sate - editing the state
 
-      this.$store.dispatch('reducePrice');
+      this.$store.dispatch('reducePrice',amount);
 
       }
     // End bad way to change the data in the vuex which is not debuggable - (editting the data directly)
