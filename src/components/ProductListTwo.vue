@@ -17,13 +17,19 @@ export default {
       return this.$store.state.products;
     },
      saleProducts(){
-      let saleProducts = this.$store.state.products.map(product=>{
-        return{
-          name:'**'+ product.name+'**',
-          price: product.price/2.0
-        }
-      });
-      return saleProducts;
+       /*
+        // old way of getters
+        let saleProducts = this.$store.state.products.map(product=>{
+          return{
+            name:'**'+ product.name+'**',
+            price: product.price/2.0
+          }
+        });
+        return saleProducts;
+      */
+
+     return this.$store.getters.saleProducts;
+
     }
   }
 }

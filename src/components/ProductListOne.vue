@@ -17,6 +17,8 @@ export default {
       return this.$store.state.products;
     },
     saleProducts(){
+      /*
+       // old way of getters
       let saleProducts = this.$store.state.products.map(product=>{
         return{
           name:'**'+ product.name+'**',
@@ -24,6 +26,9 @@ export default {
         }
       });
       return saleProducts;
+      */
+
+      return this.$store.getters.saleProducts;
     }
   }
 }
